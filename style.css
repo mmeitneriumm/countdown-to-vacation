@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0 56px 0 56px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 24px;
+  background-color: white;
+  width: fit-content;
+}
+
+.hero {
+  max-height: 300px;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  border-radius: 26px;
+  margin-top: 56px;
+}
+
+.hero img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -140px;
+  position: relative;
+}
+
+#countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 44px;
+  width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#countdown span {
+  font-weight: bold;
+  font-size: 64px;
+}
+
+#progress-bar-container {
+  width: 100%;
+  margin-top: 80px;
+}
+
+#progress-bar {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background: #e0e0e0;
+  border-radius: 26px 26px 0 0;
+  padding: 10px 0 10px 0;
+}
+
+#progress-bar:after {
+  content: '31.05.2024';
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+}
+
+#progress-bar:before {
+  content: '17.06.2024';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+}
+
+#progress-marker {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 90px;
+  width: 90px;
+  border-radius: 26px;
+  overflow: hidden;
+}
+
+#progress-marker img {
+  width: 100%;
+  height: 100%;
+}
+
+#intervals {
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+}
+
+#intervals .interval {
+  width: 2px;
+  background: white;
+  height: 100%;
+}
