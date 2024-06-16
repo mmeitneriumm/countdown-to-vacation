@@ -4,6 +4,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const totalDuration = endDate - startDate;
   const daysBetween = Math.floor(totalDuration / (1000 * 60 * 60 * 24));
 
+  const hero = document.querySelector('.hero');
+  const countdown = document.querySelector('.countdown');
+  const progress = document.querySelector('.progress-bar');
+  const video = document.querySelector('.video');
+
   function updateCountdown() {
     const now = new Date().getTime();
     const distance = endDate - now;
@@ -23,6 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     if (distance < 0) {
       clearInterval(countdownInterval);
       document.getElementById("countdown").innerHTML = "Время истекло";
+      hero.style.display = 'none';
+      countdown.style.display = 'none';
+      progress.style.display = 'none';
+      video.style.display = 'block';
+      video.querySelector('video').play();
+
     } else {
       const elapsed = totalDuration - distance;
       const progress = (elapsed / totalDuration) * 100;

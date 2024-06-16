@@ -116,3 +116,7 @@ h1 {
   background: white;
   height: 100%;
 }
+
+.video {
+  display: none;
+}
